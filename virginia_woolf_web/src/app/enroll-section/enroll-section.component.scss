@@ -1,38 +1,44 @@
 @import url('https://fonts.cdnfonts.com/css/cabrion');
 
-.enroll-section{
+.enroll-section {
     display: flex;
+    flex-wrap: wrap; // Permite que los elementos se envuelvan
     width: 100%;
     height: 100%;
     padding: 4%;
+    border: 2px solid #B8B9BE;
 }
-.left-half{
-    width: 50%;
+
+.left-half, .right-half {
+    width: 50%; // Por defecto, cada mitad ocupa el 50%
 }
-.title{
-    font-size: 5.5rem;;
+
+.title {
+    font-size: 5.0rem;
     color: #168680;
     font-family: 'Cabrion', sans-serif;
     font-weight: 900;
     font-style: italic;
     text-align: center;
 }
-.desc-container{
+
+.desc-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
-.desc-text{
+
+.desc-text {
     font-family: 'Cabrion', sans-serif;
     color: #B8B9BE;
-    font-size : 1.3rem;
+    font-size: 1.3rem;
     text-align: center;
     font-weight: bold;
     width: 40%;
 }
-.subtitle{
+
+.subtitle {
     font-family: 'Cabrion', sans-serif;
     color: #168680;
     font: normal normal bold 30px/36px Cabrion;
@@ -40,18 +46,88 @@
     opacity: 1;
     padding-top: 2%;
 }
-.btn-container{
+
+.btn-container {
     display: flex;
-    padding-top: 5%;
+    padding-top: 2%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.btn{
-    width: 280px;
-    height: 50px;
+
+.btn {
+    width: 250px;
+    height: 40px;
     background: #168680 0% 0% no-repeat padding-box;
     color: white;
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #00332c;
+        color: white;
+    }
 }
+
+.right-half {
+    width: 50%;
+    display: flex;
+    justify-content: center; // Centra la imagen horizontalmente
+    align-items: center; // Centra la imagen verticalmente
+}
+
+.circle-image {
+    width: 80%;
+}
+
+// Media Queries
+@media (max-width: 768px) {
+    .left-half, .right-half {
+        width: 100%; // Ocupa el 100% del ancho en pantallas pequeñas
+    }
+
+    .desc-text {
+        width: 80%; // Aumenta el ancho de la descripción en pantallas pequeñas
+        font-size: 1.1rem; // Reduce un poco el tamaño de la fuente
+    }
+
+    .title {
+        font-size: 3.0rem; // Reduce el tamaño de la fuente del título
+    }
+
+    .btn {
+        width: 200px; // Ajusta el ancho del botón
+        font-size: 1rem;
+
+    &:hover {
+        background-color: #00332c;
+        color: white;
+    }
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.5rem; // Reduce aún más el tamaño de la fuente del título
+    }
+
+    .desc-text {
+        font-size: 1.0rem; // Reduce el tamaño de la fuente de la descripción
+    }
+
+    .btn {
+        width: 180px; // Ajusta aún más el ancho del botón
+        height: 35px; // Ajusta la altura del botón
+        &:hover {
+            background-color: #00332c;
+            color: white;
+        }
+    }
+
+    .circle-image {
+        width: 100%; // Aumenta el tamaño de la imagen para pantallas muy pequeñas
+    }
+}
+
