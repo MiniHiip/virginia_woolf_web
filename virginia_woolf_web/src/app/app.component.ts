@@ -6,6 +6,7 @@ import { EnrollSectionComponent } from './enroll-section/enroll-section.componen
 import { CommonModule } from '@angular/common'; // Importa módulos necesarios
 import { RouterModule } from '@angular/router'; // Importa el módulo de rutas si lo necesitas
 import { FirstModuleComponent } from './first-module/first-module.component';
+import { AboutSComponent } from './about-s/about-s.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { FirstModuleComponent } from './first-module/first-module.component';
     NavbarComponent, 
     FooterComponent, 
     FirstModuleComponent,
-    EnrollSectionComponent
+    EnrollSectionComponent,
+    AboutSComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
