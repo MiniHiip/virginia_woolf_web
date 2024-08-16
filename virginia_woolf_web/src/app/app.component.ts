@@ -7,6 +7,8 @@ import { CommonModule } from '@angular/common'; // Importa módulos necesarios
 import { RouterModule } from '@angular/router'; // Importa el módulo de rutas si lo necesitas
 import { FirstModuleComponent } from './first-module/first-module.component';
 import { ThirdModuleComponent } from './third-module/third-module.component';
+import { ModulePrimariaComponent } from './module-primaria/module-primaria.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,7 +20,8 @@ import { ThirdModuleComponent } from './third-module/third-module.component';
     FooterComponent, 
     FirstModuleComponent,
     EnrollSectionComponent,
-    ThirdModuleComponent
+    ThirdModuleComponent,
+    ModulePrimariaComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

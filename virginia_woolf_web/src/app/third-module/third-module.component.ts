@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-third-module',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './third-module.component.html',
-  styleUrl: './third-module.component.scss'
+  styleUrls: ['./third-module.component.scss']
 })
-export class ThirdModuleComponent {
-
-}
+export class ThirdModuleComponent { }
