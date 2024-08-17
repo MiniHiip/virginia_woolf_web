@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+
+<ng-container *ngIf="!showViewPrimaria">
+  <app-first-module></app-first-module>
+  <app-enroll-section></app-enroll-section>
+  <app-third-module (showPrimariaView)="handleShowPrimariaView()"></app-third-module>
+</ng-container>
+
+<ng-container *ngIf="showViewPrimaria">
+  <app-view-primaria></app-view-primaria>
+</ng-container>
+
+<app-footer></app-footer>

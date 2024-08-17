@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router'; // Importa el módulo de rutas s
 import { FirstModuleComponent } from './first-module/first-module.component';
 import { ThirdModuleComponent } from './third-module/third-module.component';
 import { ModulePrimariaComponent } from './module-primaria/module-primaria.component';
-
+import { SixthModuleComponent } from './sixth-module/sixth-module.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,6 +21,7 @@ import { ModulePrimariaComponent } from './module-primaria/module-primaria.compo
     FirstModuleComponent,
     EnrollSectionComponent,
     ThirdModuleComponent,
+    SixthModuleComponent,
     ModulePrimariaComponent
   ],
   templateUrl: './app.component.html',
