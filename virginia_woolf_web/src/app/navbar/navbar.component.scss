@@ -6,143 +6,120 @@
   padding: 1rem 2rem;
   background-color: #ffffff;
   border-bottom: 2px solid #ccc;
+  position: relative;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-item {
+  margin: 0 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #6c757d;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #168680;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  width: 200px;
+  border: 2px solid #6c757d;
+  border-radius: 5px;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  background-color: #f7f7f7;
+  color: #6c757d;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #004d40;
+  outline: none;
+  background-color: #e0e0e0;
+}
+
+.search-icon {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+
+.subscribe-button {
+  background-color: #168680;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 1rem;
+}
+
+.subscribe-button:hover {
+  background-color: #00332c;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
 
   .nav-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-grow: 1;
-    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
 
-    .nav-item {
-      margin: 0 1.5rem;
+  .nav-list.open {
+    transform: translateX(0);
+  }
 
-      .nav-link {
-        text-decoration: none;
-        color: #6c757d;
-        font-weight: bold;
-        transition: color 0.3s;
-
-        &:hover {
-          color: #168680;
-        }
-
-        &.active {
-          color: #168680;
-        }
-
-        &:not(.active) {
-          color: #9e9e9e;
-        }
-      }
-    }
+  .nav-item {
+    margin: 1.5rem 0;
+    text-align: left;
+    width: 100%;
+    padding-left: 1.5rem;
   }
 
   .nav-actions {
-    display: flex;
-    align-items: center;
-
-    .search-container {
-      position: relative;
-
-      .search-input {
-        width: 200px;
-        border: 2px solid #6c757d;
-        border-radius: 5px;
-        padding: 0.5rem 2rem 0.5rem 1rem;
-        background-color: #f7f7f7;
-        color: #6c757d;
-        transition: border-color 0.3s;
-
-        &:focus {
-          border-color: #004d40;
-          outline: none;
-          background-color: #e0e0e0;
-        }
-      }
-
-      .search-icon {
-        position: absolute;
-        right: 0.5rem;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #6c757d;
-      }
-    }
-
-    .subscribe-button {
-      background-color: #168680;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-left: 1rem;
-
-      &:hover {
-        background-color: #00332c;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-
-    .nav-list {
-      justify-content: center;
-      flex-wrap: wrap;
-
-      .nav-item {
-        margin: 0.5rem;
-      }
-    }
-
-    .nav-actions {
-      width: 100%;
-      justify-content: center;
-      margin-top: 0.5rem;
-
-      .search-input {
-        width: calc(100% - 8rem);
-        margin-right: 0.5rem;
-      }
-
-      .subscribe-button {
-        width: auto;
-        margin-left: 0;
-        margin-top: 0.5rem;
-      }
-    }
-  }
-
-  @media (max-width: 480px) {
-    .nav-list {
-      justify-content: center;
-      flex-wrap: wrap;
-
-      .nav-item {
-        margin: 0.5rem;
-      }
-    }
-
-    .nav-actions {
-      width: 100%;
-      justify-content: center;
-      margin-top: 0.5rem;
-
-      .search-input {
-        width: calc(100% - 8rem);
-        margin-right: 0.5rem;
-      }
-
-      .subscribe-button {
-        width: auto;
-        margin-left: 0;
-        margin-top: 0.5rem;
-      }
-    }
+    display: none;
   }
 }
