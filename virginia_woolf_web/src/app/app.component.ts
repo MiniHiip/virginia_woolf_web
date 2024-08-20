@@ -9,6 +9,10 @@ import { FirstModuleComponent } from './first-module/first-module.component';
 import { ThirdModuleComponent } from './third-module/third-module.component';
 import { ModulePrimariaComponent } from './module-primaria/module-primaria.component';
 import { SixthModuleComponent } from './sixth-module/sixth-module.component';
+import { ModuleSecundariaComponent } from './module-secundaria/module-secundaria.component';
+import { ModulePreparatoriaComponent } from './module-preparatoria/module-preparatoria.component';
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -22,7 +26,9 @@ import { SixthModuleComponent } from './sixth-module/sixth-module.component';
     EnrollSectionComponent,
     ThirdModuleComponent,
     SixthModuleComponent,
-    ModulePrimariaComponent
+    ModulePrimariaComponent,
+    ModuleSecundariaComponent,
+    ModulePreparatoriaComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
