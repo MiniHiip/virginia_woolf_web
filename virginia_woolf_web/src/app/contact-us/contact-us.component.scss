@@ -1,0 +1,90 @@
+.background {
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    background-image: url('/img/contact-us-bg.jpg');
+    background-size: cover; /* Asegura que la imagen cubra el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+
+.blur{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    border-radius: 42px;
+    background:  #1686807e 0% 0% no-repeat padding-box;
+}
+.container {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 columnas */
+    grid-template-rows: repeat(5, 11%);  /* Auto ajusta la altura de las filas */
+    grid-column-gap: 1%; /* Espacio entre columnas */
+    grid-row-gap: 5%;    /* Espacio entre filas */
+}
+
+/* Asegúrate de que el h1 esté en la primera columna y primera fila */
+.container h3 {
+    color: white;
+    grid-column: 1 / 2; /* Ocupa la primera columna */
+    grid-row: 1 / 2;    /* Ocupa la primera fila */
+}
+
+/* Input Nombre en la segunda fila, primera columna */
+#Nombre {
+    grid-column: 1 / 2; /* Primera columna */
+    grid-row: 2 / 3;    /* Segunda fila */
+}
+
+/* Input Mail a la derecha del Nombre */
+#Mail {
+    grid-column: 2 / 3; /* Segunda columna */
+    grid-row: 2 / 3;    /* Segunda fila */
+}
+
+/* Input Telefono en la tercera fila, primera columna */
+#Telefono {
+    grid-column: 1 / 2; /* Primera columna */
+    grid-row: 3 / 4;    /* Tercera fila */
+}
+
+/* Input Ciudad a la derecha del Telefono */
+#Ciudad {
+    grid-column: 2 / 3; /* Segunda columna */
+    grid-row: 3 / 4;    /* Tercera fila */
+}
+
+/* Input Municipio en la cuarta fila, primera columna */
+#Municipio {
+    grid-column: 1 / 2; /* Primera columna */
+    grid-row: 4 / 5;    /* Cuarta fila */
+}
+
+/* Input Estado a la derecha del Municipio */
+#Estado {
+    grid-column: 2 / 3; /* Segunda columna */
+    grid-row: 4 / 5;    /* Cuarta fila */
+}
+
+#ProgramaEducativo {
+    grid-column: 1 / 3; /* Abarca desde la primera columna hasta la tercera columna */
+    grid-row: 5 / 6;    /* Quinta fila */
+}
+
+input{
+    border-radius: 12px;
+    width: 80%;
+    padding-left: 20px;
+    border: #16868000;
+}
+
+input::placeholder {
+    color: #168680bb; /* Cambia el color del texto del placeholder */
+    font-size: 24px; /* Cambia el tamaño del texto del placeholder */
+    font-weight: 600;
+}
+
+

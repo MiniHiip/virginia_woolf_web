@@ -11,6 +11,8 @@ import { ModulePrimariaComponent } from './module-primaria/module-primaria.compo
 import { SixthModuleComponent } from './sixth-module/sixth-module.component';
 import { ModuleSecundariaComponent } from './module-secundaria/module-secundaria.component';
 import { ModulePreparatoriaComponent } from './module-preparatoria/module-preparatoria.component';
+import { AboutSComponent } from './about-s/about-s.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +29,9 @@ import { ModulePreparatoriaComponent } from './module-preparatoria/module-prepar
     SixthModuleComponent,
     ModulePrimariaComponent,
     ModuleSecundariaComponent,
-    ModulePreparatoriaComponent
+    ModulePreparatoriaComponent,
+    AboutSComponent,
+    ContactUsComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
