@@ -5,10 +5,12 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-enroll-section',
   standalone: true,
-  imports: [RouterModule],
+  imports: [
+    RouterModule  
+    ],
   templateUrl: './enroll-section.component.html',
   styleUrl: './enroll-section.component.scss'
 })
 export class EnrollSectionComponent {
-
+  
 }

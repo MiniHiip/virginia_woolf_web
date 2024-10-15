@@ -11,14 +11,17 @@
 <body>
   
   <nav class="navbar">
-    <ul class="nav-list">
-      <li class="nav-item"><a class="nav-link" routerLink="/">Inicio</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/convocatorias">Convocatorias</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/conocenos">Conócenos</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/contactanos">Contáctanos</a></li>
+    <div class="navbar-toggle" (click)="toggleMenu()">
+      <i class="fas" [ngClass]="menuOpen ? 'fa-times' : 'fa-bars'"></i>
+    </div>
+    <ul class="nav-list" [class.open]="menuOpen">
+      <li class="nav-item"><a class="nav-link" routerLink="">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="[]" fragment="enrollSection">Convocatorias</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="[]" fragment="about">Conócenos</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="[]" fragment="contactanos">Contáctanos</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="subscribe-button">Inscríbete ya</button>
+      <a class="subscribe-button" [routerLink]="[]" fragment="academic">Inscríbete ya</a>
     </div>
   </nav>
   
