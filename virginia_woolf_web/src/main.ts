@@ -3,6 +3,8 @@ import { provideRouter, Routes } from '@angular/router';
 import { AppComponent } from './app/app.component';
 import { FirstModuleComponent } from './app/first-module/first-module.component';
 
+
+
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'inicio', component: FirstModuleComponent },
