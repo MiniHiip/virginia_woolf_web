@@ -18,14 +18,6 @@ export const routes: Routes = [
         redirectTo:'inicio',
         pathMatch: 'full'
     },
-    { 
-        path: 'footer', 
-        component: FooterComponent
-    },
-    {
-        path: 'navbar', 
-        component: NavbarComponent
-    },
     {
         path: 'error',
         component: ErrorPageComponent
