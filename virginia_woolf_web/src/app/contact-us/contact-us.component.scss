@@ -11,6 +11,10 @@
 .btn-submit{
     width: 50%;
     border-radius: 10px;
+    @media (max-width: 768px){
+        width: 80%;
+        height: 40px;
+    }
 }
 
 .blur{
@@ -33,6 +37,14 @@ form{
     grid-template-rows: repeat(5, 30%);  /* Auto ajusta la altura de las filas */
     grid-column-gap: 1%; /* Espacio entre columnas */
     grid-row-gap: 10%;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; /* 1 columna en pantallas medianas */
+        grid-row-gap: 1%;
+        grid-column-gap: 1%;
+        grid-template-rows: repeat(5, 15%);
+    }
+
 }
 
 /* Asegúrate de que el h1 esté en la primera columna y primera fila */
@@ -40,6 +52,9 @@ form{
     color: white;
     grid-column: 1 / 2; /* Ocupa la primera columna */
     grid-row: 1 / 2;    /* Ocupa la primera fila */
+    @media (max-width: 768px){
+        font-size: 34px;
+    }
 }
 
 /* Input Nombre en la segunda fila, primera columna */
@@ -88,6 +103,9 @@ input{
     width: 80%;
     padding-left: 20px;
     border: #16868000;
+    @media (max-width: 768px) {
+        height: 50px;
+    }
 }
 
 input::placeholder {

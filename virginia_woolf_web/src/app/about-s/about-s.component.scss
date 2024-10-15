@@ -150,56 +150,106 @@
     }
 }
 
-.review{
+.review {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 2%;
     padding-bottom: 4%;
+
+    @media (max-width: 768px) {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 5%;
+        padding-bottom: 6%;
+    }
 }
 
-.bottom{
+.bottom {
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Asegura que los elementos se alineen correctamente en pantallas pequeñas */
 
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+
+    @media (max-width: 480px) {
+        width: 95%;
+    }
 }
-.section{
+
+.section {
     padding-top: 2%;
     background-color: #cfe6e5;
     width: 100%;
     border-radius: 42px;
 
-    div :first-child{
+    @media (max-width: 768px) {
+        padding: 5%;
+        border-radius: 30px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 5%;
+        border-radius: 20px;
+    }
+
+    div:first-child {
         color: #168680;
     }
 }
 
-.carrousell{
+.carrousell {
     display: flex;
     width: 100%;
     padding: 5%;
-    justify-content: center;
+    justify-content: space-between; /* Alinea mejor los elementos en pantallas grandes */
     height: 38vh;
+
+    @media (max-width: 768px) {
+        height: auto;
+        flex-wrap: wrap; /* Acomoda los elementos cuando la pantalla es pequeña */
+    }
+
+    @media (max-width: 480px) {
+        padding: 2%;
+    }
 }
-.carrousell div{
+
+.carrousell div {
     width: 15%;
+
+    @media (max-width: 768px) {
+        width: 20%;
+    }
+
+    @media (max-width: 480px) {
+        width: 30%;
+    }
 }
 
-h3{
-    text-align: center;
-    color: #bdbec3;
-}
-h1{
-    text-align: center;
-}
+.student_pic img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
 
-p{
-    text-align: center;
-    color: #bdbec3;
-    font-size: 20px;
+    @media (max-width: 768px) {
+        width: 130px;
+        height: 130px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .footer-carrousell {
@@ -210,36 +260,36 @@ p{
     height: 100%;
     padding-bottom: 2%;
 
-    .btn{
+    .btn {
         margin-top: 1%;
     }
-    :first-child{ 
+
+    :first-child {
         color: #168680;
     }
 }
 
-.student_pic {
+.prev, .next {
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
-        width: 170px; /* Puedes ajustar el tamaño según lo que necesites */
-        height: 170px; /* Asegúrate de que el ancho y la altura sean iguales para crear un círculo */
-        border-radius: 50%; /* Esto convierte la imagen en un círculo */
-        object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor circular */
-    }
-}
 
-.prev, .next{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    button{
-        width: 100px; /* Puedes ajustar el tamaño según lo que necesites */
-        height: 100px; /* Asegúrate de que el ancho y la altura sean iguales para crear un círculo */
-        border-radius: 50%; /* Esto convierte la imagen en un círculo */
-        object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor circular */
+    button {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
         border: #ffffff;
+
+        @media (max-width: 768px) {
+            width: 80px;
+            height: 80px;
+        }
+
+        @media (max-width: 480px) {
+            width: 60px;
+            height: 60px;
+        }
+
         &:hover {
             background-color: #00332c;
             color: white;
@@ -247,5 +297,41 @@ p{
     }
 }
 
+h3 {
+    text-align: center;
+    color: #bdbec3;
 
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
 
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }
+}
+
+h1 {
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 20px;
+    }
+}
+
+p {
+    text-align: center;
+    color: #bdbec3;
+    font-size: 20px;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }
+}
