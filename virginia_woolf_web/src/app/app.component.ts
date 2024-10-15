@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { EnrollSectionComponent } from './enroll-section/enroll-section.component';
@@ -13,6 +13,8 @@ import { ModuleSecundariaComponent } from './module-secundaria/module-secundaria
 import { ModulePreparatoriaComponent } from './module-preparatoria/module-preparatoria.component';
 import { AboutSComponent } from './about-s/about-s.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { HomeComponent } from './home/home.component'; // Asegúrate de importar el HomeComponent
 
 @Component({
   selector: 'app-root',
@@ -31,7 +33,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ModuleSecundariaComponent,
     ModulePreparatoriaComponent,
     AboutSComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ErrorPageComponent,
+    RouterLink,
+    HomeComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
