@@ -32,7 +32,7 @@ export class ContactUsComponent {
   // Método para enviar los datos por WhatsApp
   sendWhatsApp() {
     console.log('hola');
-    const numeroWhatsApp = '4191225282'; // Reemplaza con el número deseado
+    const numeroWhatsApp = '4421499781'; // Reemplaza con el número deseado
     const mensaje = `Nombre: ${this.contactForm.value.nombre}\n` +
                     `Teléfono: ${this.contactForm.value.telefono}\n` +
                     `Municipio: ${this.contactForm.value.municipio}\n` +
@@ -46,8 +46,5 @@ export class ContactUsComponent {
     // Redirigir a WhatsApp
     window.open(url);
   }
-  handleClick() {
-    // Perform actions here when the button is clicked
-    console.log('Button clicked!');
-  }
+
 }

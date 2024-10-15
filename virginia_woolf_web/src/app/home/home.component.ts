@@ -7,6 +7,7 @@ import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { SixthModuleComponent } from '../sixth-module/sixth-module.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',

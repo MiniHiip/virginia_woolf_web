@@ -8,6 +8,10 @@
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
+.btn-submit{
+    width: 50%;
+    border-radius: 10px;
+}
 
 .blur{
     width: 80%;
@@ -19,11 +23,16 @@
 }
 .container {
     margin-top: 5%;
+       /* Espacio entre filas */
+}
+
+form{
+    margin-top: 2%;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 4 columnas */
-    grid-template-rows: repeat(5, 11%);  /* Auto ajusta la altura de las filas */
+    grid-template-rows: repeat(5, 30%);  /* Auto ajusta la altura de las filas */
     grid-column-gap: 1%; /* Espacio entre columnas */
-    grid-row-gap: 5%;    /* Espacio entre filas */
+    grid-row-gap: 10%;
 }
 
 /* Asegúrate de que el h1 esté en la primera columna y primera fila */
