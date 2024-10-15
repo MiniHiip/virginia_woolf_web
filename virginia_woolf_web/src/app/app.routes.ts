@@ -3,6 +3,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { FirstModuleComponent } from './first-module/first-module.component'
+import { ViewPrimariaComponent } from './view-primaria/view-primaria.component';
 import path from 'path';
 import { ApplicationConfig } from '@angular/core';
 import { HomeComponent } from './home/home.component';
@@ -18,20 +19,16 @@ export const routes: Routes = [
         redirectTo:'inicio',
         pathMatch: 'full'
     },
-    { 
-        path: 'footer', 
-        component: FooterComponent
-    },
-    {
-        path: 'navbar', 
-        component: NavbarComponent
-    },
     {
         path: 'error',
         component: ErrorPageComponent
     },
     {
+        path: 'ingles', 
+        component: ViewPrimariaComponent
+    },
+    {
         path: '**',
         component: ErrorPageComponent
-    }
+    }   
 ];

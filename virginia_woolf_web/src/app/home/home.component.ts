@@ -5,7 +5,8 @@ import { ThirdModuleComponent } from '../third-module/third-module.component';
 import { AboutSComponent } from '../about-s/about-s.component';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { SixthModuleComponent } from '../sixth-module/sixth-module.component';
-
+import { FooterComponent } from '../footer/footer.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,8 @@ import { SixthModuleComponent } from '../sixth-module/sixth-module.component';
     SixthModuleComponent,
     AboutSComponent,
     ContactUsComponent,
+    FooterComponent,
+    NavbarComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

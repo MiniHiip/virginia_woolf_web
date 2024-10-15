@@ -15,6 +15,7 @@ import { AboutSComponent } from './about-s/about-s.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { HomeComponent } from './home/home.component'; // Asegúrate de importar el HomeComponent
+import { ViewPrimariaComponent } from './view-primaria/view-primaria.component';
 
 @Component({
   selector: 'app-root',
@@ -36,6 +37,7 @@ import { HomeComponent } from './home/home.component'; // Asegúrate de importar
     ContactUsComponent,
     ErrorPageComponent,
     RouterLink,
+    ViewPrimariaComponent,
     HomeComponent
   ],
   templateUrl: './app.component.html',
