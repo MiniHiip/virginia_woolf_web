@@ -6,13 +6,11 @@
   padding: 1rem 2rem;
   background-color: #ffffff;
   border-bottom: 2px solid #ccc;
-  position: relative;
-}
-
-.navbar-toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 1.5rem;
+  position: fixed; /* Hacemos la barra fija */
+  top: 0;          /* Fija en la parte superior */
+  width: 100%;     /* La barra ocupa todo el ancho */
+  z-index: 1000;   /* Aseguramos que la barra esté por encima del contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agregamos una sombra sutil para destacar */
 }
 
 .nav-list {
@@ -22,7 +20,6 @@
   padding: 0;
   flex-grow: 1;
   justify-content: center;
-  transition: transform 0.3s ease;
 }
 
 .nav-item {
@@ -45,34 +42,6 @@
   align-items: center;
 }
 
-.search-container {
-  position: relative;
-}
-
-.search-input {
-  width: 200px;
-  border: 2px solid #6c757d;
-  border-radius: 5px;
-  padding: 0.5rem 2rem 0.5rem 1rem;
-  background-color: #f7f7f7;
-  color: #6c757d;
-  transition: border-color 0.3s;
-}
-
-.search-input:focus {
-  border-color: #004d40;
-  outline: none;
-  background-color: #e0e0e0;
-}
-
-.search-icon {
-  position: absolute;
-  right: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #6c757d;
-}
-
 .subscribe-button {
   background-color: #168680;
   color: white;
@@ -89,39 +58,25 @@
   background-color: #00332c;
 }
 
-/* Mobile view adjustments */
+/* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
-  .navbar-toggle {
-    display: block;
+  .navbar {
+    flex-direction: column;  /* Cambia el diseño a columnas en móviles */
+    align-items: flex-start;
   }
 
   .nav-list {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    background-color: #ffffff;
-    flex-direction: column;
-    justify-content: flex-start;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
-  }
-
-  .nav-list.open {
-    // Estado abierto
-    transform: translateX(0);
+    flex-direction: row;  /* El menú se queda horizontal */
+    overflow-x: auto;     /* Añade scroll horizontal si hay más elementos */
+    width: 100%;
+    justify-content: space-between;
   }
 
   .nav-item {
-    margin: 1.5rem 0;
-    text-align: left;
-    width: 100%;
-    padding-left: 1.5rem;
+    margin: 0.5rem;  /* Reducimos el espacio entre elementos */
   }
 
-  .nav-actions {
-    display: none;
+  .subscribe-button {
+    margin-top: 1rem;  /* Ajustamos el botón en móviles */
   }
 }

@@ -11,11 +11,8 @@
 <body>
   
   <nav class="navbar">
-    <div class="navbar-toggle" (click)="toggleMenu()">
-      <i class="fas" [ngClass]="menuOpen ? 'fa-times' : 'fa-bars'"></i>
-    </div>
-    <ul class="nav-list" [class.open]="menuOpen">
-      <li class="nav-item"><a class="nav-link" routerLink="">Inicio</a></li>
+    <ul class="nav-list">
+      <li class="nav-item"><a class="nav-link" routerLink="/">Inicio</a></li>
       <li class="nav-item"><a class="nav-link" routerLink="/convocatorias">Convocatorias</a></li>
       <li class="nav-item"><a class="nav-link" routerLink="/conocenos">Conócenos</a></li>
       <li class="nav-item"><a class="nav-link" routerLink="/contactanos">Contáctanos</a></li>

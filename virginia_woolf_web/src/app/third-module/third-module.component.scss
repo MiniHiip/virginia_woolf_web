@@ -98,6 +98,7 @@
             font-weight: bold;
             border-radius: 5px;
             cursor: pointer;
+            text-decoration: none;  /* Para que se vea como un botón y no como un enlace */
             transition: background-color 0.3s ease;
             display: inline-block;
             white-space: nowrap; 
