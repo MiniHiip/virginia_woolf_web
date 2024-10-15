@@ -7,6 +7,8 @@ import { ThirdModuleComponent } from './app/third-module/third-module.component'
 import { AboutSComponent } from './app/about-s/about-s.component';
 import { ContactUsComponent } from './app/contact-us/contact-us.component';
 
+
+
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'inicio', component: FirstModuleComponent },  // Ruta de inicio
