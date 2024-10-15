@@ -1,16 +1,19 @@
-<div class="background">
+<div class="background" id="contactanos">
     <div class="blur">
-        <div class="container">
-            <h3>
-                ¡Conócenos!
-            </h3>
-            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre:">
-            <input type="text" name="Telefono" id="Telefono" placeholder="Telefono:">
-            <input type="text" name="Municipio" id="Municipio" placeholder="Municipio:">
-            <input type="text" name="Mail" id="Mail" placeholder="Mail:">
-            <input type="text" name="Ciudad" id="Ciudad" placeholder="Ciudad:">
-            <input type="text" name="Estado" id="Estado" placeholder="Estado:">
-            <input type="text" name="ProgramaEducativo" id="ProgramaEducativo" placeholder="Programa Educativo:">
-        </div>
+      <div class="container">
+        <h3>¡Conócenos!</h3>
+        <form [formGroup]="contactForm" (ngSubmit)="sendWhatsApp()">
+          <input type="text" formControlName="nombre" placeholder="Nombre:" required>
+          <input type="text" formControlName="telefono" placeholder="Teléfono:" required>
+          <input type="text" formControlName="municipio" placeholder="Municipio:">
+          <input type="text" formControlName="mail" placeholder="Mail:">
+          <input type="text" formControlName="ciudad" placeholder="Ciudad:">
+          <input type="text" formControlName="estado" placeholder="Estado:">
+          <input type="text" formControlName="programaEducativo" placeholder="Programa Educativo:">
+          <button type="submit">Enviar</button>
+        </form>
+        <button (click)="handleClick()">Hola</button>
+      </div>
     </div>
-</div>
+  </div>
+  
